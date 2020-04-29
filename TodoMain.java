@@ -29,6 +29,7 @@ public class TodoMain {
     public static final String PRINT_DUEDATE = "due date is: ";
     public static final String YES = "Y";
     public static final String NO = "N";
+    public static final String EMPTY_STRING = "";
     
     public static final String ADD_SUCCESS =
             "New item successfully added to your todo list.";
@@ -136,14 +137,14 @@ public class TodoMain {
         String completed = in.nextLine();
 
         // parsing user input
-        if (description.trim() == "") {
+        if (description.trim().equals(EMPTY_STRING)) {
             System.out.println(INVALID_TASK_DESCRIPTION);
             return;
         }
 
         TodoItem item = new TodoItem(description);
 
-        if (!dueDateStr.equals("")) {
+        if (!dueDateStr.equals(EMPTY_STRING)) {
             System.out.println(PRINT_DUEDATE + dueDateStr);
             DateTime dueDate = new DateTime(dueDateStr);
             item.setDueDate(dueDate);
@@ -180,14 +181,14 @@ public class TodoMain {
         String completed = in.nextLine();
 
         // parsing user input
-        if (description.trim() == "") {
+        if (description.trim().equals(EMPTY_STRING)) {
             System.out.println(INVALID_TASK_DESCRIPTION);
             return;
         }
 
         TodoItem item = new TodoItem(description);
 
-        if (!dueDateStr.equals("")) {
+        if (!dueDateStr.equals(EMPTY_STRING)) {
             System.out.println(PRINT_DUEDATE + dueDateStr);
             DateTime dueDate = new DateTime(dueDateStr);
             item.setDueDate(dueDate);
@@ -218,7 +219,7 @@ public class TodoMain {
         String description = in.nextLine();
 
         // Check for valid description
-        if (description.trim() == "") {
+        if (description.trim().equals(EMPTY_STRING)) {
             System.out.println(INVALID_TASK_DESCRIPTION);
             return;
         }
@@ -251,7 +252,7 @@ public class TodoMain {
             String description = in.nextLine();
 
             // Check for valid description
-            if (description.trim() == "") {
+            if (description.trim().equals(EMPTY_STRING)) {
                 System.out.println(INVALID_TASK_DESCRIPTION);
                 return;
             }
