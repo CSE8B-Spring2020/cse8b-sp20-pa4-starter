@@ -8,7 +8,6 @@ public class TodoList {
     private static final int DEFAULT_MAX_ITEMS = 10;
 
     TodoItem[] items;
-    int maxItems; // the maximum items the TodoList can hold
     int count;    // current number of items in the TodoList
 
     /**
